@@ -1,8 +1,8 @@
 package com.byinal.playground.site;
 
-public class Slide extends AbstractPlaysite {
+public class Carousel extends AbstractPlaysite {
 
-    public Slide(String name, Double capaticy) {
+    public Carousel(String name, Double capaticy) {
         super(name, capaticy);
     }
 

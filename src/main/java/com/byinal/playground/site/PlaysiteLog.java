@@ -1,34 +1,30 @@
-package com.byinal.playground.kid;
+package com.byinal.playground.site;
 
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.UUID;
 
 public class PlaysiteLog {
 
-    private UUID playsiteId;
+    private String playsiteName;
     private Long timestampAtJoin;
     private Long timestampAtLeave;
 
-    public PlaysiteLog(UUID playsiteId, Long timestampAtJoin) {
-        this.playsiteId = playsiteId;
+    public PlaysiteLog(String playsiteName, Long timestampAtJoin) {
+        this.playsiteName = playsiteName;
         this.timestampAtJoin = timestampAtJoin;
     }
 
-    public PlaysiteLog(UUID playsiteId, Long timestampAtJoin, Long timestampAtLeave) {
-        this.playsiteId = playsiteId;
+    public PlaysiteLog(String playsiteName, Long timestampAtJoin, Long timestampAtLeave) {
+        this.playsiteName = playsiteName;
         this.timestampAtJoin = timestampAtJoin;
         this.timestampAtLeave = timestampAtLeave;
     }
 
-    public UUID getPlaysiteId() {
-        return playsiteId;
+    public String getPlaysiteName() {
+        return playsiteName;
     }
 
-    public void setPlaysiteId(UUID playsiteId) {
-        this.playsiteId = playsiteId;
+    public void setPlaysiteName(String playsiteName) {
+        this.playsiteName = playsiteName;
     }
 
     public Long getTimestampAtJoin() {
@@ -47,11 +43,20 @@ public class PlaysiteLog {
         this.timestampAtLeave = timestampAtLeave;
     }
 
-    public Long getTimePlayedInSec(){
-        if (timestampAtLeave == null){
+    public Long getTimePlayedInSec() {
+        if (timestampAtLeave == null) {
             return Instant.now().getEpochSecond() - timestampAtJoin;
         } else {
-          return timestampAtLeave - timestampAtJoin;
+            return timestampAtLeave - timestampAtJoin;
         }
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("PlaysiteLog{");
+        sb.append("playsiteName='").append(playsiteName).append('\'');
+        sb.append("timePlayedInSec='").append(String.valueOf(getTimePlayedInSec())).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

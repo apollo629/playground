@@ -1,8 +1,8 @@
 package com.byinal.playground.site;
 
-public class Slide extends AbstractPlaysite {
+public class Ballpit extends AbstractPlaysite {
 
-    public Slide(String name, Double capaticy) {
+    public Ballpit(String name, Double capaticy) {
         super(name, capaticy);
     }
 
@@ -10,4 +10,5 @@ public class Slide extends AbstractPlaysite {
     public Double calculateUtilization() {
         return (numberOfPlaceTaken / capaticy) * 100;
     }
+
 }
