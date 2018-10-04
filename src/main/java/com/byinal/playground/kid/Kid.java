@@ -55,6 +55,10 @@ public class Kid implements Comparable {
         return nowPlayingIn;
     }
 
+    public boolean isPlaying() {
+        return nowPlayingIn != null;
+    }
+
     public boolean askForQueue() {
         return true;
     }
@@ -70,7 +74,6 @@ public class Kid implements Comparable {
         playsiteLogs.replace(playsiteId, playsiteLog);
         this.nowPlayingIn = null;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -94,7 +97,7 @@ public class Kid implements Comparable {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Kid{");
+        final StringBuffer sb = new StringBuffer("Kid ");
         sb.append("name='").append(name).append('\'');
         sb.append(", age=").append(age);
         sb.append(", ticket=").append(ticket.toString());

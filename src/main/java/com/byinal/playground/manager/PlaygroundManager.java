@@ -12,4 +12,8 @@ public interface PlaygroundManager {
 
     Map<String, Integer> getTotalVisitorsByPlaysite();
 
+    Integer getTotalVisitors();
+
+    Map<String, Double> getCurrentUtilization();
+
 }

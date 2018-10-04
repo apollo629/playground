@@ -18,7 +18,7 @@ public interface Playsite {
 
     String getName();
 
-    int getTotalVisitors();
+    Integer getTotalVisitors();
 
     public Deque<Kid> getQueue();
 

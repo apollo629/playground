@@ -53,10 +53,9 @@ public class PlaysiteLog {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("PlaysiteLog{");
-        sb.append("playsiteName='").append(playsiteName).append('\'');
-        sb.append("timePlayedInSec='").append(String.valueOf(getTimePlayedInSec())).append('\'');
-        sb.append('}');
+        final StringBuffer sb = new StringBuffer("Kid played ");
+        sb.append(String.valueOf(getTimePlayedInSec())).append(" sec in ");
+        sb.append(playsiteName).append("");
         return sb.toString();
     }
 }
