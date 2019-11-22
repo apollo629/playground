@@ -19,6 +19,8 @@ public class PlaygroundApplication {
     private static final Logger logger = LoggerFactory.getLogger(PlaygroundApplication.class);
 
     public static void main(String[] args) throws InterruptedException {
+        logger.info("Test log");
+
         //create playsites
         Carousel carousel1 = new Carousel("carousel-1", 2.0);
         Carousel carousel2 = new Carousel("carousel-2", 3.0);
