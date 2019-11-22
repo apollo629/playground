@@ -1,4 +1,4 @@
-#Playground Library
+## Playground Library
 A library which implements business logic for a playground management company
 
 ## Prerequisites
